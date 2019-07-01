@@ -100,14 +100,14 @@ class FileItem extends Component {
             <div className="file-item fl">
                 <a href="#" className="close-classic" onClick={e => this.handleCloseClick(e)}></a>
                 <img src={this.state.imageData} alt="" className={this.state.inProgress ? "grayscale" : ""} />
-                <span>{file.name} ({this.getSizeOf(file.size)})</span>
-                <button onClick={(e) => this.handleParseClick(e)} disabled={this.state.inProgress || !this.state.isImage}>Recognize</button>
+                <p>{file.name} ({this.getSizeOf(file.size)})</p>
+                <button className="recognize-button" onClick={(e) => this.handleParseClick(e)} disabled={this.state.inProgress || !this.state.isImage}>Обработать</button>
                 {this.state.inProgress && (
                     <svg className="spinner" viewBox="0 0 50 50">
                         <circle className="path" cx="25" cy="25" r="20" fill="none" strokeWidth="5"></circle>
                     </svg>
                 )}
-                <span>Result: {this.state.parsingResult}</span>
+                <p>Result: {this.state.parsingResult}</p>
             </div>
         );
     }

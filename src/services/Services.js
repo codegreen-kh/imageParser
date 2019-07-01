@@ -32,15 +32,18 @@ class Services extends Component {
 
     render() {
         return (
-            <div className="services-content">
-                <label>Please select one or more images or drop files in to the area below</label>{" "}
-                <input id="file-input" type="file" onChange={(e) => this.handleFileChange(e.target.files)} multiple />
-                <br />
-                <DropZone onFilesAdded={(files) => this.handleFileChange(files)} />
-                <br />
-                {_map(this.state.files, f => {
-                    return <FileItem key={f.name} file={f} onClose={this.handleCloseClick}></FileItem>
-                })}
+            <div className="dropzone-container">
+                <div className="services-content">
+                    <DropZone onFilesAdded={(files) => this.handleFileChange(files)} />
+                    <br />
+                    <label>Перетащите картинку сюда или выберите файл на компьютере</label>
+                    <input id="file-input" type="file" onChange={(e) => this.handleFileChange(e.target.files)} multiple />
+                </div>
+                <div className="fileitems-container">
+                    {_map(this.state.files, f => {
+                        return <FileItem key={f.name} file={f} onClose={this.handleCloseClick}></FileItem>
+                    })}
+                </div>
             </div>
         );
     }
