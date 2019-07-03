@@ -76,8 +76,8 @@ class DropZone extends Component {
                 <div
                     className="dropzone-upload-icon"
                 ></div>
-                <label className="text-secondary font-weight-bold">Drop image there or</label>
-                <Button type="submit" className="font-weight-bold py-0 mx-2" color="secondary" outline>select file</Button>
+                <label className="text-secondary font-weight-bold">Перетащите картинку в эту зону</label>
+                <Button type="submit" className="font-weight-bold py-0 mx-2" color="secondary" outline>Выберите файл на компьютере</Button>
                 <input
                     ref={this.fileInputRef}
                     className="FileInput"

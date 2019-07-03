@@ -255,7 +255,9 @@ ul.menu--items-list li+li:before {
 }
 
 .recognize-button {
-    width: 160px;
+    width: 154px;
+    height: 36px;
+    background-color: #00aef2;
 }
 
 .grayscale {
