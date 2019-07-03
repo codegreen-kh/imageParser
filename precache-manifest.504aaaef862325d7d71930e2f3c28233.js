@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3cb0523d882036fb0f2fb328723e5823",
+    "revision": "b7f6a65a597ce3c490a9cf32b20a1b7e",
     "url": "/imageParser/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/imageParser/static/css/2.0624914a.chunk.css"
   },
   {
-    "revision": "f2acd066cdece272a86f",
-    "url": "/imageParser/static/css/main.ec86482b.chunk.css"
+    "revision": "c91ab3eeec820cf6fbfc",
+    "url": "/imageParser/static/css/main.300d1b1e.chunk.css"
   },
   {
     "revision": "8f21cc3a99ee0aecd031",
     "url": "/imageParser/static/js/2.860b366d.chunk.js"
   },
   {
-    "revision": "f2acd066cdece272a86f",
-    "url": "/imageParser/static/js/main.b98cdaa7.chunk.js"
+    "revision": "c91ab3eeec820cf6fbfc",
+    "url": "/imageParser/static/js/main.63ec0af2.chunk.js"
   },
   {
     "revision": "8edc202513f67a06c827",
