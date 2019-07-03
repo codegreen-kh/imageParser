@@ -2,35 +2,25 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.header {
-    width: 1280px;
-    height: 56px;
-    background-color: #ffffff;
+main {
+    background-color: #FDFDFF;
+    background-image: url('./assets/img/bg-line1.png');
+    background-repeat: repeat-y;
+    background-size: contain;
 }
 
-.footer {
-    width: 1280px;
-    height: 56px;
+header {
+    height: 60px;
+}
+
+header button {
+    height: 36px;
+    width: 80px;
+}
+
+footer {
+    height: 60px;
     background-color: #ececec;
-}
-
-.footer-text {
-    display: inline-block;
-    float: left;
-    height: 56px;
-}
-
-.footer-text span {
-    line-height: 56px;
-}
-
-.footer a:last-child {
-    float: right;
-}
-
-.footer a {
-    padding: 17px 10px;
-    text-decoration: none;
 }
 
 .logo {
@@ -44,8 +34,38 @@ body {
     float: left;
 }
 
+.logo-gray {
+    background-image: url('./assets/img/logo-gray.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 160px;
+    height: 56px;
+    display: inline-block;
+    float: left;
+    margin-top: 4px;
+}
+
+.footer-text span, .footer-text a {
+    font-size: smaller;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.navbar-nav .nav-divider {
+    content: url('./assets/img/chevron-right.png');
+}
+
+.nav-item.active .nav-link,
+.nav-item .nav-link:active,
+.nav-item .nav-link:focus,
+.nav-item:hover .nav-link {
+    color: #00AEEF !important;
+}
+
 .menu, .user-section {
-	display: inline-block;   /* Allow the centering to work */
+    display: inline-block; /* Allow the centering to work */
     margin: 0 auto;
     height: 56px;
 }
@@ -60,12 +80,14 @@ body {
     align-items: center;
 }
 
+.row-info {
+    background-image: url('./assets/img/bg-top.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .page-info {
-    width: 1280px;
-    height: 200px;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
+    height: 300px;
 }
 
 .page-info span {
@@ -128,19 +150,20 @@ ul.menu--items-list li+li:before {
 
 .dropzone-container {
     width: 976px;
-    height: 448px;
     background-color: #f7fafc;
     margin: 0 auto;
-    margin-bottom: 20px;
 }
 
-.App {
-    width: 1280px;
-    margin: 0 auto;
+.dropzone-upload-icon {
+    background-image: url('./assets/img/upload.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 56px;
+    display: inline-block;
 }
 
 .Dropzone {
-    margin: 40px auto;
 }
 
 .spinner {
@@ -232,7 +255,7 @@ ul.menu--items-list li+li:before {
 }
 
 .recognize-button {
-    width: 100px;
+    width: 160px;
 }
 
 .grayscale {

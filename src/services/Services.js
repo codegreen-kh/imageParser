@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import DropZone from '../components/DropZone';
 import FileItem from '../components/FileItem';
 
+import {
+    Container, Row, Col, Button, Navbar, Nav, NavbarBrand, NavLink, NavItem
+} from 'reactstrap';
+
 import _map from 'lodash/map';
 import _filter from 'lodash/filter';
 
@@ -32,19 +36,23 @@ class Services extends Component {
 
     render() {
         return (
-            <div className="dropzone-container">
-                <div className="services-content">
-                    <DropZone onFilesAdded={(files) => this.handleFileChange(files)} />
-                    <br />
-                    <label>Перетащите картинку сюда или выберите файл на компьютере</label>
-                    <input id="file-input" type="file" onChange={(e) => this.handleFileChange(e.target.files)} multiple />
-                </div>
-                <div className="fileitems-container">
-                    {_map(this.state.files, f => {
-                        return <FileItem key={f.name} file={f} onClose={this.handleCloseClick}></FileItem>
-                    })}
-                </div>
-            </div>
+
+            <Container className="px-0">
+
+                <Row noGutters className="dropzone-container py-4 w-100 px-4 position-relative">
+
+                    <Col xs={{ order: 2 }} md={{ size: 4, order: 1 }} tag="aside" className="services-content">
+                        <DropZone onFilesAdded={(files) => this.handleFileChange(files)} />
+                    </Col>
+
+                    <Col xs={{ order: 1 }} md={{ size: 8, offset: 0 }} tag="section" className="fileitems-container">
+                        {_map(this.state.files, f => {
+                            return <FileItem key={f.name} file={f} onClose={this.handleCloseClick}></FileItem>
+                        })}
+                    </Col>
+
+                </Row>
+            </Container>
         );
     }
 }

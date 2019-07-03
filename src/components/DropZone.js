@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './DropZone.css'
 
+import { Button } from 'reactstrap';
+
 class DropZone extends Component {
     constructor(props) {
         super(props)
@@ -71,6 +73,11 @@ class DropZone extends Component {
                 onClick={this.openFileDialog}
                 style={{ cursor: this.props.disabled ? 'default' : 'pointer' }}
             >
+                <div
+                    className="dropzone-upload-icon"
+                ></div>
+                <label className="text-secondary font-weight-bold">Drop image there or</label>
+                <Button type="submit" className="font-weight-bold py-0 mx-2" color="secondary" outline>select file</Button>
                 <input
                     ref={this.fileInputRef}
                     className="FileInput"
@@ -78,12 +85,6 @@ class DropZone extends Component {
                     multiple
                     onChange={this.onFilesAdded}
                 />
-                <img
-                    alt="upload"
-                    className="Icon"
-                    src="baseline-cloud_upload-24px.svg"
-                />
-                <span>Upload Files</span>
             </div>
         )
     }
